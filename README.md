@@ -24,8 +24,8 @@ Press too early and you get an error. The board keeps your best time.
 | `tick_gen` | 1 ms tick from the 100 MHz clock | ✅ done, tested |
 | `ms_counter` | Counts 0000–9999 ms in BCD, stops at 9999 | ✅ done, tested |
 | `lfsr_random` | 16-bit LFSR, random wait of 1000–5095 ms | ✅ done, tested |
-| `button_pulse` | Debounce + one-clock pulse (from Lab 6) | ⏳ |
-| `display_mux`, `bcd_to_7seg` | Drive the display (from Lab 6) | ⏳ |
+| `button_pulse` | Debounce + one-clock pulse (from Lab 6) | ✅ done, tested |
+| `display_mux`, `bcd_to_7seg` | Drive the display (from Lab 6) | ✅ done, tested |
 | `game_fsm` | READY → WAIT → GO → RESULT / EARLY | ⏳ |
 | `best_score` | Saves the fastest time | ⏳ |
 | `reaction_game_top` | Top module | ⏳ |
@@ -35,7 +35,7 @@ Press too early and you get an error. The board keeps your best time.
 ```
 src/          Verilog source
 sim/          Self-checking testbenches
-constraints/  Basys 3 XDC file
+constraints/  Basys 3 XDC file (reaction_game.xdc)
 docs/         Diagrams and report
 ```
 
@@ -53,6 +53,7 @@ Each testbench prints `PASS` or `FAIL`. They also run in the Vivado simulator.
 ## Progress
 
 - **Nov 16, 2026** – Proposal approved. Added `tick_gen`, `ms_counter`, `lfsr_random` with testbenches.
+- **Nov 16, 2026** – Added `button_pulse`, `bcd_to_7seg` (from Lab 6), `display_mux` (taken out of the Lab 6 clock), testbenches, and the Basys 3 XDC.
 
 ## Reference
 
