@@ -13,3 +13,5 @@
 *.vcd
 *.wdb
 tb
+# Build output
+build/
